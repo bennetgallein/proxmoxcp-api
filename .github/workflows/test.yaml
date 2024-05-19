@@ -19,6 +19,9 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
       - run: npm run doc
+      - run: |
+          git config user.email "me@bennetgallein.de"
+          git config user.name "Bennet Gallein"
       - run: npm run prepare-release
         env:
           GITHUB_TOKEN: ${{secrets.PAT_TOKEN}}
