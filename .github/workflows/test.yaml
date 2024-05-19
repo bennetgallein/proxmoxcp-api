@@ -22,6 +22,7 @@ jobs:
       - run: |
           git config user.email "me@bennetgallein.de"
           git config user.name "Bennet Gallein"
+          git remote set-url origin https://git:${PAT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
       - run: npm run prepare-release
         env:
           GITHUB_TOKEN: ${{secrets.PAT_TOKEN}}
