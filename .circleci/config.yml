@@ -78,4 +78,5 @@ workflows:
     jobs:
       - 'node-16'
       - 'node-18'
+      - 'node-20'
       - 'node-latest'
