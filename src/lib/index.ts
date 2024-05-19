@@ -1,6 +1,8 @@
 import { xior, XiorInstance } from 'xior';
 
+import { Calculator } from './endpoints/calculator';
 import { Packages } from './endpoints/packages';
+import { Templates } from './endpoints/templates';
 
 export class ProxmoxCpApi {
   private instance: XiorInstance | null = null;
@@ -33,6 +35,21 @@ export class ProxmoxCpApi {
    */
   public packages() {
     return new Packages(this.instance!);
+  }
+
+  /**
+   * return an instance of the templates class
+   */
+  public templates() {
+    return new Templates(this.instance!);
+  }
+
+  /**
+   * return an instance of the calculator class
+   * @returns
+   */
+  public calculator() {
+    return new Calculator(this.instance!);
   }
 
   /**
