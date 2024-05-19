@@ -1,6 +1,6 @@
-import { XiorInstance } from "xior";
+import { XiorInstance } from 'xior';
 
-import { DataProvider } from "../common/data.provider";
+import { DataProvider } from '../common/data.provider';
 
 export class Templates extends DataProvider {
   constructor(readonly client: XiorInstance) {

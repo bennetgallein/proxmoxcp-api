@@ -14,9 +14,9 @@ export class Packages extends DataProvider {
    * @returns list of packages
    */
   public async list() {
-    const { data: packages } = await this.client.get<(Package & { meta: string })[]>(
-      '/api/packages/get'
-    );
+    const { data: packages } = await this.client.get<
+      (Package & { meta: string })[]
+    >('/api/packages/get');
     return packages.map((_package) => ({
       ..._package,
       type: PackageType[_package.type],

@@ -9,11 +9,11 @@ export type Package = {
   sort: number;
   type: number;
   templateId: number | null;
-}
+};
 
 export type PackageMeta = { [key: string]: string };
 
 export enum PackageType {
-  "STATIC" = 1,
-  "DYNAMIC" = 2
+  'STATIC' = 1,
+  'DYNAMIC' = 2,
 }

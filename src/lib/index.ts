@@ -1,9 +1,8 @@
-import { xior, XiorInstance } from "xior";
+import { xior, XiorInstance } from 'xior';
 
-import { Packages } from "./endpoints/packages";
+import { Packages } from './endpoints/packages';
 
 export class ProxmoxCpApi {
-
   private instance: XiorInstance | null = null;
 
   /**
@@ -18,13 +17,14 @@ export class ProxmoxCpApi {
   constructor(
     private readonly baseUrl: string,
     private readonly token?: string,
-    instance?: XiorInstance) {
+    instance?: XiorInstance
+  ) {
     if (!instance) {
       this.instance = xior.create({
-        baseURL: baseUrl
-      })
+        baseURL: baseUrl,
+      });
     } else {
-      this.instance = instance
+      this.instance = instance;
     }
   }
 
@@ -34,7 +34,6 @@ export class ProxmoxCpApi {
   public packages() {
     return new Packages(this.instance!);
   }
-
 
   /**
    * get the current baseUrl
@@ -51,5 +50,4 @@ export class ProxmoxCpApi {
   public getToken() {
     return this.token;
   }
-
 }

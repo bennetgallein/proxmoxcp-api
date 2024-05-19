@@ -1,7 +1,11 @@
-import { XiorInstance } from "xior";
+import { XiorInstance } from 'xior';
 
-import { DataProvider } from "../common/data.provider";
-import { CalculationRequest, CalculationResponse, CalculatorOptionsResponse } from "../types/calculator.types";
+import { DataProvider } from '../common/data.provider';
+import {
+  CalculationRequest,
+  CalculationResponse,
+  CalculatorOptionsResponse,
+} from '../types/calculator.types';
 
 export class Calculator extends DataProvider {
   constructor(readonly client: XiorInstance) {
@@ -18,7 +22,7 @@ export class Calculator extends DataProvider {
   public async getOrderOptions(templateVmId?: string, charges?: number[]) {
     return this.client.post<CalculatorOptionsResponse>(`/api/order/get-specs`, {
       os: templateVmId,
-      options: JSON.stringify(charges)
+      options: JSON.stringify(charges),
     });
   }
 

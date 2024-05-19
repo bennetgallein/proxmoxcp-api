@@ -9,4 +9,4 @@ export type Template = {
   minRAM: number;
   disabled: number;
   sort: number;
-}
+};
