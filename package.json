@@ -36,7 +36,7 @@
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && npm i",
     "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish",
-    "publish": "run-s prepare-release && git push --follow-tags origin master && npm publish"
+    "publish-now": "run-s prepare-release && git push --follow-tags origin master && npm publish --access public"
   },
   "engines": {
     "node": ">=10"
