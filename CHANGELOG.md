@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/bennetgallein/proxmoxcp-api/compare/v1.1.6...v1.3.0) (2024-05-25)
+
+
+### Features
+
+* add calculator and templates, update readme ([6116e04](https://github.com/bennetgallein/proxmoxcp-api/commit/6116e0450193c83fb21d865cf606873cf38ae00a))
+* add see comment ([0392ca3](https://github.com/bennetgallein/proxmoxcp-api/commit/0392ca32c15cd35c98f2a3a993eeea013fe20460))
+* packages ([e47568a](https://github.com/bennetgallein/proxmoxcp-api/commit/e47568aa10e3f01ff00090809fee749df4dc2014))
+
+
+### Bug Fixes
+
+* formatting ([5fc4624](https://github.com/bennetgallein/proxmoxcp-api/commit/5fc462417a05679ec000776e84f88538c39ff10b))
+
 ## [1.2.0](https://github.com/bennetgallein/proxmoxcp-api/compare/v1.1.6...v1.2.0) (2024-05-19)
 
 
