@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/bennetgallein/proxmoxcp-api/compare/v1.3.0...v1.3.1) (2024-05-25)
+
+
+### Bug Fixes
+
+* update api ([6c0ddb0](https://github.com/bennetgallein/proxmoxcp-api/commit/6c0ddb06aebb9049fd69d1ebad775cb15a82c284))
+
 ## [1.3.0](https://github.com/bennetgallein/proxmoxcp-api/compare/v1.1.6...v1.3.0) (2024-05-25)
 
 
