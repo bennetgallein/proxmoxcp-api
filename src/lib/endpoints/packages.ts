@@ -26,13 +26,13 @@ export class Packages extends DataProvider {
     return packages.map((_package) => {
       let type = PackageType.DYNAMIC;
       if (_package.type == 1) {
-        type = PackageType.STATIC
+        type = PackageType.STATIC;
       }
       return {
         ..._package,
         type,
         meta: this.decodeMeta(_package.meta),
-      }
+      };
     });
   }
 
