@@ -3,6 +3,11 @@
 This is a fully typed javascript client for the Proxmox Control Panel.
 
 ## Getting started
+Installation:
+```
+npm i @bennetgallein/proxmoxcp-api
+```
+
 Create a new instance:
 
 ```js
