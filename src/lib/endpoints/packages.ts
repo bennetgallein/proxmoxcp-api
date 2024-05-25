@@ -3,6 +3,12 @@ import { XiorInstance } from 'xior';
 import { DataProvider } from '../common/data.provider';
 import { Package, PackageMeta, PackageType } from '../types/packages.type';
 
+/**
+ * the Packages class provides a way to interact with the packages which can
+ * be defined in the ProxmoxCP.
+ *
+ * @see https://docs-next.bennetg.de/products/proxmox-cp/configuration/package-managment
+ */
 export class Packages extends DataProvider {
   constructor(readonly client: XiorInstance) {
     super(client);
