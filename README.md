@@ -2,6 +2,9 @@
 
 This is a fully typed javascript client for the Proxmox Control Panel.
 
+> [!NOTE]  
+> This is an API-Wrapper library for the ProxmoxCP, which is a self-developed product. It does NOT offer direct communication via API to Proxmox. Checkout the [ProxmoxCP](https://bennetgallein.de/shop/proxmox_control_panel-34) on my website.
+
 ## Getting started
 Installation:
 ```
