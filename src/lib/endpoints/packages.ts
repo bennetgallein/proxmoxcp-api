@@ -9,19 +9,25 @@ export class Packages extends DataProvider {
   }
 
   /**
-   * list all packages
+   * list all packages. results are already sorted
    *
    * @returns list of packages
    */
-  public async list() {
+  public async list(): Promise<Package[]> {
     const { data: packages } = await this.client.get<
       (Package & { meta: string })[]
     >('/api/packages/get');
-    return packages.map((_package) => ({
-      ..._package,
-      type: PackageType[_package.type],
-      meta: this.decodeMeta(_package.meta),
-    }));
+    return packages.map((_package) => {
+      let type = PackageType.DYNAMIC;
+      if (_package.type == 1) {
+        type = PackageType.STATIC
+      }
+      return {
+        ..._package,
+        type,
+        meta: this.decodeMeta(_package.meta),
+      }
+    });
   }
 
   /**
