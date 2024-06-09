@@ -1,5 +1,6 @@
 import { xior, XiorInstance } from 'xior';
 
+import { Authentication } from './endpoints/authentication';
 import { Calculator } from './endpoints/calculator';
 import { Packages } from './endpoints/packages';
 import { Templates } from './endpoints/templates';
@@ -28,6 +29,9 @@ export class ProxmoxCpApi {
     } else {
       this.instance = instance;
     }
+    if (token) {
+      this.instance.defaults.headers['Authorization'] = `Token ${token}`;
+    }
   }
 
   /**
@@ -50,6 +54,14 @@ export class ProxmoxCpApi {
    */
   public calculator() {
     return new Calculator(this.instance!);
+  }
+
+  /**
+   * return an authentication class instance
+   * @returns
+   */
+  public authentication() {
+    return new Authentication(this.instance!);
   }
 
   /**

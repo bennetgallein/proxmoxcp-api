@@ -5,6 +5,8 @@ import {
   CalculationRequest,
   CalculationResponse,
   CalculatorOptionsResponse,
+  PurchaseRequest,
+  PurchaseResponse,
 } from '../types/calculator.types';
 
 export class Calculator extends DataProvider {
@@ -34,5 +36,23 @@ export class Calculator extends DataProvider {
    */
   public async calculate(request: CalculationRequest) {
     return this.client.post<CalculationResponse>(`/api/order/calc`, request);
+  }
+
+  /**
+   * send a purchase request, if you provide a package, you can leave the cpu, ram and disk fields empty
+   *
+   * ssh keys are optional as well
+   *
+   * Note that this endpoint requires authentication, which you would need to provide
+   * via the `token` parameter when initializing the client.
+   *
+   * @param request
+   * @returns
+   */
+  public async purchase(request: PurchaseRequest) {
+    return this.client.post<PurchaseResponse>(`/api/order/purchase`, {
+      ...request,
+      options: JSON.stringify(request.options),
+    });
   }
 }
