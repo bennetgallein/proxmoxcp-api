@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/bennetgallein/proxmoxcp-api/compare/v1.3.3...v1.4.0) (2024-06-09)
+
+
+### Features
+
+* purchase request ([b41c11c](https://github.com/bennetgallein/proxmoxcp-api/commit/b41c11cc95866915016b1939904aded71b8340a4))
+
 ### [1.3.3](https://github.com/bennetgallein/proxmoxcp-api/compare/v1.3.2...v1.3.3) (2024-05-25)
 
 
